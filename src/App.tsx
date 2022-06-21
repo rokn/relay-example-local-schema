@@ -2,6 +2,20 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import { graphql } from 'babel-plugin-relay/macro';
+
+const notificationsQuery = graphql`
+    query NotificationManagerNotificationsQuery {
+        viewer{
+            id
+        }
+        notifications {
+            title
+            body
+        }
+    }
+`;
+
 function App() {
   return (
     <div className="App">

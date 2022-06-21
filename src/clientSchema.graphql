@@ -1,0 +1,8 @@
+type Notification {
+  title: String
+  body: String
+}
+
+extend type Query {
+    notifications: [Notification]
+}

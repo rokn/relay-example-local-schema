@@ -1,0 +1,18 @@
+type Query {
+  viewer: UserNode
+}
+
+type UserNode implements Node {
+  firstName: String!
+  lastName: String!
+  email: String!
+
+  """The ID of the object"""
+  id: ID!
+}
+
+"""An object with an ID"""
+interface Node {
+  """The ID of the object"""
+  id: ID!
+}
